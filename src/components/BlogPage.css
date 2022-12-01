@@ -1,0 +1,16 @@
+.blog-page{
+    padding: 15px;
+    height: calc(100vh - 80px);
+}
+.blog-page__main-title{
+    margin-bottom: 30px;
+}
+.blog-page__blog-content{
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.blog-page__image > img{
+    height: 400px;
+}

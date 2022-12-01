@@ -5,6 +5,7 @@ function NavBar() {
   return (
     <div className="navBar">
       <ul className="navBar__navLinks">
+        <NavLink to={'/'} className="navBar__link">home</NavLink>
         <NavLink to={'/create-blog'} className="navBar__link">create blog</NavLink>
         <NavLink to={'/view-blogs'} className="navBar__link">view blogs</NavLink>
         <NavLink to={'/contact'} className="navBar__link">contact</NavLink>

@@ -1,23 +1,30 @@
 .new-blog{
     padding: 15px;
-    display: grid;
-    place-items: center;
     height: calc(100vh - 80px);
 }
-
+.new-blog__main-title{
+    width: fit-content;
+    margin: 0 auto;
+}
 .new-blog > form{
     width: 400px;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    padding: 20px 10px;
-    border: 2px solid black;
+    padding: 30px;
+    border: 3px solid black;
     border-radius: 6px;
+    margin: 50px auto;
 }
 
 .new-blog__input{
     border: 1px solid black;
-    padding: 5px 10px;
+    padding: 15px 20px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
 }
 
 .new-blog__submit{

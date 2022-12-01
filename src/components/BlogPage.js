@@ -1,12 +1,15 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import './BlogPage.css'
 function BlogPage({blogsList}) {
     const {blogId} = useParams();
-    const curBlog = blogsList.filter(b=>b.id===parseInt(blogId))
+    const curBlog = blogsList.filter(b=>b.id===blogId);
+    const navigate = useNavigate()
   return (
     <div className='blog-page'>
-        <h1 className='blog-page__main-title'>{curBlog[0].author} blog</h1>
+        <ArrowBackIcon className='blog-page__back-icon' onClick={()=>navigate(-1)}/>
+        <h1 className='blog-page__main-title'>{curBlog[0]?.author} blog</h1>
         {curBlog.map(b=>{
             return <div className='blog-page__blog-content'>
                     <div className="blog-page__image">
@@ -18,6 +21,7 @@ function BlogPage({blogsList}) {
                         </h2>
                         <h3 className='blog-page__author'>author : {b.author}</h3>
                         <span className='blog-page__date'>date : {b.date}</span>
+                        <p className="blog-page__blog">{b.blog}</p>
                     </div>
             </div>
         })[0]}
